@@ -7,7 +7,9 @@
 </head>
 <body>
     <nav>
-        <!-- Admin Navigation -->
+        <ul>
+        <li><a href="{{ route('logout') }}">Se déconnecter</a></li>
+        </ul>
     </nav>
     <div class="container">
         @yield('content')

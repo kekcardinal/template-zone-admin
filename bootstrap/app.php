@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
-use App\Http\Middleware\AdminMiddleware;
+// use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Foundation\Configuration\Middleware;
 
 return Application::configure(basePath: dirname(__DIR__))
@@ -11,7 +11,8 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->add('admin', AdminMiddleware::class);
+        // $middleware->web(append:[App\Http\Middleware\AdminMiddleware::class,]);
+        // $middleware->add('admin', AdminMiddleware::class);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
